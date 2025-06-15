@@ -12,7 +12,7 @@ class PreloaderScene extends Phaser.Scene {
         this.cameras.main.fadeIn(800, 0, 0, 0);
         this.personalScale = (this.scale.height + this.scale.width) / 2200;
 
-        this.background = this.add.sprite(0, 0, 'forest_background').setOrigin(0.5, 1);
+        this.background = this.add.sprite(0, 0, 'orchard_background').setOrigin(0.5, 1);
         const aspectRatio = this.background.width / this.background.height;
         let newW, newH;
         if (this.scale.width / this.scale.height > aspectRatio) {
@@ -103,40 +103,35 @@ class PreloaderScene extends Phaser.Scene {
         else console.log("Errore nel caricamento del chosenCharacter");
         this.load.image('ground_background', 'assets/underground_background.jpg');
 
-        this.load.spritesheet('truck', 'assets/Sprites_truck.png', {
-            frameWidth: 2795/6,
-            frameHeight: 240,
-            margin: 0,
-            spacing: 6.71,
-        });
-
         this.load.image('ground', 'assets/Sprites_ground.png');
         this.load.image('flower', 'assets/Sprites_flowers.png');
         this.load.image('grass', 'assets/Sprites_grass.png');
-        this.load.image('tree_1', 'assets/Sprites_tree_1.png');
-        this.load.image('tree_2', 'assets/Sprites_tree_2.png');
-        this.load.image('tree_3', 'assets/Sprites_tree_3.png');
-        this.load.image('tree_4', 'assets/Sprites_tree_4.png');
+        this.load.image('appleTree1', 'assets/Sprites_apple_tree_1.png');
+        this.load.image('appleTree2', 'assets/Sprites_apple_tree_2.png');
+        this.load.image('appleTree3', 'assets/Sprites_apple_tree_3.png');
         this.load.image('deepGround', 'assets/Sprites_deep-ground.png');
         this.load.image('box', 'assets/Sprites_box.png');
         this.load.image('skull_1', 'assets/Sprites_skeleton_1.png');
         this.load.image('skull_2', 'assets/Sprites_skeleton_2.png');
         this.load.image('skull_3', 'assets/Sprites_skeleton_3.png');
+        this.load.image('fence', 'assets/Sprites_fence.png');
         this.load.image('direction_board', 'assets/Sprites_direction_board.png');
         this.load.image('end_board', 'assets/Sprites_end_board.png');
-        this.load.spritesheet('boar', 'assets/Sprites_boar.png', {
-            frameWidth: 133,
-            frameHeight: 101
+        this.load.spritesheet('spider', 'assets/Sprites_spider.png', {
+            frameWidth: 611.87/4,
+            frameHeight: 73,
+            margin: 2,
+            spacing: 6.71
         });
-        this.load.image('mushroom', 'assets/Sprites_mushroom.png');
-        this.load.image('mushroom_smashed', 'assets/Sprites_mushroom_2.png');
-        this.load.image('blueberry_icon', 'assets/Sprites_blueberry_icon.png');
+        this.load.image('pumpkin', 'assets/Sprites_pumpkin.png');
+        this.load.image('pumpkin_2', 'assets/Sprites_pumpkin_2.png');
+        this.load.image('apple_icon', 'assets/Sprites_apple_icon.png');
         this.load.image('sugar_icon', 'assets/Sprites_sugar_cube_icon.png');
         this.load.spritesheet('sugar', 'assets/Sprites_sugar_cube.png', {
             frameWidth: 91,
             frameHeight: 91
         });
-        this.load.spritesheet('blueberry', 'assets/Sprites_blueberry.png', {
+        this.load.spritesheet('apple', 'assets/Sprites_apple.png', {
             frameWidth: 91,
             frameHeight: 91
         });
@@ -153,7 +148,7 @@ class PreloaderScene extends Phaser.Scene {
         this.load.audio('soundtrack', 'sounds/soundtrack.mp3');
         this.load.audio('jump', 'sounds/jump.mp3');
         this.load.audio('collect', 'sounds/coin.mp3');
-        this.load.audio('boar', 'sounds/boar.mp3');
+        this.load.audio('spider', 'sounds/spider.mp3');
         this.load.audio('pop', 'sounds/pop.mp3');
         this.load.audio('jumpOver', 'sounds/jumpOver.mp3');
         this.load.audio('gameOver', 'sounds/gameOver.mp3');
