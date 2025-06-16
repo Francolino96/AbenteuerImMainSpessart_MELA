@@ -691,7 +691,7 @@ export function createWhiteMushroom(scene, xPosition, yPosition) {
 
 export function createBomb(scene, xPosition, yPosition) {
     let spriteName = "";
-    if (scene.sceneName == 'OrchardScene'){
+    if (scene.sceneName == 'OrchardScene' || scene.sceneName == 'FirstScene'){
         spriteName = 'pumpkin'
     }
     else if (scene.sceneName == 'WaterScene'){

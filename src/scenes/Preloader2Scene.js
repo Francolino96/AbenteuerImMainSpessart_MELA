@@ -181,8 +181,6 @@ class Preloader2Scene extends Phaser.Scene {
                 margin: 2,
                 spacing: 6.71
             });
-            this.load.image('pumpkin', 'assets/Sprites_pumpkin.png');
-            this.load.image('pumpkin_2', 'assets/Sprites_pumpkin_2.png');
             this.load.image('sugar_icon', 'assets/Sprites_sugar_cube_icon.png');
             this.load.spritesheet('sugar', 'assets/Sprites_sugar_cube.png', {
                 frameWidth: 91,
